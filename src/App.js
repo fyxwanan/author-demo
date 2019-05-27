@@ -28,11 +28,9 @@ class App extends Component{
     getBoxIds = () => {
         // 正文板块绑定的id数组
         const linkIds = [];
-        let name = '';
         ObjectList.forEach((item, index) => {
             const top = document.getElementById(`${item.id}`);
             if (top) {
-                name = item.id;
                 linkIds.push({ key: item.id, offsetTop: top.getBoundingClientRect().top});
             }
         })
