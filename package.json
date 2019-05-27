@@ -2,7 +2,7 @@
   "name": "author-demo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
+  "homepage": "https://fyxwanan.github.io/author-demo",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
