@@ -10,7 +10,7 @@ const ObjectList =
 
     // 时间戳
 function dateToTimestamp (time, language = 'zh_CN') {
-	console.log('a ===>')
+	console.log('a ===> 1')
   // 刚刚、几分钟前、几小时前、几天前、几周前、（超一周后且当年）月日-时分、年月日-时分
   const now = new Date().getTime();
   const { userAgent } = navigator;
@@ -20,7 +20,7 @@ function dateToTimestamp (time, language = 'zh_CN') {
     if (time) {
       last = new Date(Date.parse(time.replace(/-/g, '/')));
     }
-  } else if (userAgent.indexOf('Safari') > -1) {
+  } else if (userAgent.indexOf('Safari') > -1 || userAgent.indexOf('iPhone') > - 1) {
     if (time) {
       last = new Date(Date.parse(time.replace(/-/g, '/')));
     }
@@ -29,7 +29,7 @@ function dateToTimestamp (time, language = 'zh_CN') {
   }
   // const subtract = (now - last) / (1000 * 60 * 60);  // 这是时间差毫小时
   const subtract = (now - last); // 这是时间差毫小时
-  document.write('userAgent ===>' + userAgent);
+  document.write('userAgent === ===>' + userAgent);
   document.write('<br>');
   document.write('time ===>' + time);
   document.write('<br>');
@@ -107,7 +107,6 @@ class App extends Component{
     componentDidMount() {
         this.getBoxIds();
         const b = dateToTimestamp('2020-05-22 18:16:51');
-        console.log('b ===>', b)
         document.write(b);
     }
 
